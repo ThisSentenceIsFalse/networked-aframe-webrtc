@@ -12,8 +12,23 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                      presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env']
                     }
+                }
+            },
+            {
+                test: /.jsx$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react', '@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /.html$/,
+                use: {
+                    loader: 'html-loader',
                 }
             }
         ]
